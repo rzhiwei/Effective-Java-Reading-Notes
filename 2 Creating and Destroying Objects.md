@@ -1,6 +1,12 @@
 # Chapter 2 创建和销毁对象
 ## 第1条 考虑用静态工厂方法代替构造器
 对于类而言, 最常用的获取实例的方法就是提供一个公有的构造器, 还有一种方法, 就是提供一个公有的静态工厂方法(static factory method), 返回类的实例.
+public class User{
+    public User(){}
+    public static User getInstance(){
+        return new User();
+    }
+}
 
 (注意此处的静态工厂方法与设计模式中的工厂方法模式不同.)
 
