@@ -126,7 +126,6 @@ swapHelper -> 把复杂的泛型内化.
 所以编译器会在这种声明的时候警告heap pollution: 不能保证类型安全. 
 
 **把一个值保存在泛型的可变参数数列中是不安全的.**
-
 那么为什么声明泛型的数组是非法的, 而这种泛型可变参数声明是合法的呢? 实际上在实践中是有用的, 所以语言设计者保留了它.
 Java类库中: `Arrays.asList(T...a)`, `Collections.addAll(Collection<? super T> c, T... elements)`, `EnumSet.of(E first, E... rest)`.
 这些类库方法是类型安全的.
